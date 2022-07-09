@@ -105,11 +105,12 @@
                           <label class="form-label" for="day">Day*</label>
                           <!-- <select name="day[]" id="day" class="form-control select2" multiple="multiple"> -->
                           <select name="day[]" id="day" class="form-control">
+                              <option value="Monday" <?= in_array('Monday', explode(',',isset($value['day']) ? $value['day']:'' )) ? 'selected':''?>> Monday </option>
                               <option value="Tuesday" <?= in_array('Tuesday', explode(',',isset($value['day']) ? $value['day']:'' )) ? 'selected':''?>> Tuesday </option>
                               <option value="Wednesday"<?= in_array('Wednesday', explode(',',isset($value['day']) ? $value['day']:'' )) ? 'selected':''?>> Wednesday </option>
                               <option value="Thursday"<?= in_array('Thursday', explode(',',isset($value['day']) ? $value['day']:'' )) ? 'selected':''?>> Thursday </option>
                               <option value="Friday"<?= in_array('Friday', explode(',',isset($value['day']) ? $value['day']:'' )) ? 'selected':''?>> Friday </option>
-                              <option value="Satutrday"<?= in_array('Satutrday', explode(',',isset($value['day']) ? $value['day']:'' )) ? 'selected':''?>> Satutrday </option>
+                              <option value="Saturday"<?= in_array('Saturday', explode(',',isset($value['day']) ? $value['day']:'' )) ? 'selected':''?>> Satutrday </option>
                               <option value="Sunday"<?= in_array('Sunday', explode(',',isset($value['day']) ? $value['day']:'' )) ? 'selected':''?>> Sunday </option>
                           </select>
                         </div>

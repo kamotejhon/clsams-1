@@ -11,10 +11,10 @@
  <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      BEES DEV.
+      ABBD.
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; Beyond Errors for Easy Solution 2020.</strong> All rights reserved.
+    <strong>Copyright &copy; Anonymous Bug Breaker and Discoverer 2022.</strong> All rights reserved.
 </footer>
   <!--  -->
 </div>
@@ -99,7 +99,7 @@
           text: 'Generate PDF',
           title: 'Events',
           exportOptions: {
-            columns: [0,1,2,3,4,5,6,7],
+            columns: [0,1,2,3,4,5,6,7,8],
           },
           customize: function ( win ) {
           

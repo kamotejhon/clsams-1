@@ -407,7 +407,7 @@ CREATE TABLE `permissions` (
 
 INSERT INTO `permissions` (`id`, `name_on_class`, `function_name`, `function_description`, `link_icon`, `slugs`, `page_title`, `module_id`, `table_name`, `func_action`, `allowed_roles`, `order`, `status`, `func_type`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'add_school_year', 'Add School Year', 'add_school_year', '<i class=\"fas fa-plus-square nav-icon\"></i>', 'add_school_year', 'Add School Year', 4, 'admin/schoolyears', '1', '[1]', 1, 'a', 1, '2021-06-20 12:59:27', '2021-10-10 01:17:58', NULL),
-(3, 'home', 'view home page', 'home', '<i class=\"nav-icon fas fa-home\"></i>', 'home', 'Home', 1, 'admin/home', '1', '[1,6]', 1, 'a', 1, '2021-06-20 16:54:13', '2021-10-10 01:17:58', NULL),
+(3, 'home', 'view home page', 'home', '<i class=\"nav-icon fas fa-home\"></i>', 'home', 'Home', 1, 'admin/home', '1', '[1,2,3,5]', 1, 'a', 1, '2021-06-20 16:54:13', '2021-10-10 01:17:58', NULL),
 (4, 'permission', 'view permissions', 'permission', NULL, 'user permission', 'user permission', 2, 'admin/permissions', '1', '[1]', 1, 'a', 1, '2021-06-20 16:57:52', '2021-10-10 01:17:58', NULL),
 (5, 'user role', 'view roles', 'user role', NULL, 'user role', 'user role', 3, 'admin/role', '1', '[1]', 1, 'a', 1, '2021-06-20 16:59:19', '2021-10-10 01:17:58', NULL),
 (6, 'schedule event', ' Schedule Event', 'schedule event', '<i class=\"fas fa-calendar-alt\"></i>', 'schedule event', 'schedule event', 5, 'admin/schedlabs', NULL, '[1,2]', 1, 'a', 1, '2021-06-20 17:00:15', '2021-10-10 01:17:58', NULL),
@@ -428,7 +428,7 @@ INSERT INTO `permissions` (`id`, `name_on_class`, `function_name`, `function_des
 (23, 'view attendance', 'view attendance', 'view attendance', NULL, 'view attendance', 'view attendance', 7, 'admin/attendance', NULL, '[1]', 1, 'a', 1, '2021-06-30 19:38:43', '2021-10-10 01:17:58', NULL),
 (24, 'Activity Logs', 'Activity Logs', 'Activity Logs', ' <i class=\"fas fa-history\"></i>', 'Activity Logs', 'Activity Logs', 9, 'admin/activity', NULL, '[1]', 5, 'a', 1, '2021-07-08 12:29:28', '2021-10-10 01:17:58', NULL),
 (25, 'view holiday', 'view holiday', 'view holiday', NULL, 'view holiday', 'view holiday', 8, 'admin/holiday', NULL, '[1]', 8, 'a', 1, '2021-07-20 22:08:03', '2021-10-10 01:17:58', NULL),
-(26, 'view profile', 'view profile', 'view profile', NULL, 'view profile', 'view profile', 10, 'admin/profile', NULL, '[2,3]', 1, 'a', 1, '2021-07-23 23:49:33', '2021-10-10 01:17:58', NULL);
+(26, 'view profile', 'view profile', 'view profile', NULL, 'view profile', 'view profile', 10, 'admin/profile', NULL, '[1,2,3,4,5,6,7,8]', 1, 'a', 1, '2021-07-23 23:49:33', '2021-10-10 01:17:58', NULL);
 
 -- --------------------------------------------------------
 

@@ -81,8 +81,8 @@ class BaseController extends Controller
 			$this->permissions = $model_permission->like('allowed_roles', $_SESSION['rid'])->findAll();
 			$this->modules = $model_module->findAll();
 
-			$_SESSION['appmodules'] = $this->modules;
-			$_SESSION['userPermmissions'] = $this->permissions;
+			$_SESSION['amppmodules'] = $this->modules;
+			$_SESSION['userPermissions'] = $this->permissions;
 		}else{
 		   
     	

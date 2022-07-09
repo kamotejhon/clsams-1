@@ -188,7 +188,7 @@ public function attendance()
   if($_GET['type'] == 'event'){
     $data['attendances'] = $attendanceModel->getAttendancesBySchedsubj($_GET['id'],$_GET['date']);
     $data['info'] = $schedsubj->getSubjectById($_GET['id']);
-
+    
   }else{
     $data['attendances'] = $attendanceModel->getAttendancesBySchedlabs($_GET['id'],$_GET['date']);
     $data['info'] = $schedlabs->getScheduleLabById($_GET['id']);

@@ -1,5 +1,4 @@
-
- <div class="content-wrapper">
+  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid ">
@@ -68,13 +67,7 @@
                       <?php endif;?>  
                     </div>
                   </div>
-
-                  
-
-                  
                 </div>
-              
-               
 
                 <div class="row">
                   <div class="col-md-6">

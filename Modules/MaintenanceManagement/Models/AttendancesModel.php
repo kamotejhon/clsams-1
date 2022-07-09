@@ -127,9 +127,10 @@ class AttendancesModel extends \CodeIgniter\Model
   }
 
   public function getAttendancesByFilter($data){
-    $this->select('attendances.id as id, students.student_num,students.first_name, students.last_name, students.m_initial, attendances.time_in,attendances.schedule_id,attendances.student_number, attendances.time_out, attendances.date, attendances.remarks');
+    $this->select('attendances.id as id, students.student_num,students.first_name, students.last_name, students.m_initial, attendances.time_in,attendances.schedule_id,attendances.student_number, attendances.time_out, attendances.date, attendances.remarks, subjects.subj_name');
     $this->join('students', 'attendances.student_id = students.id');
     $this->join('schedsubjs', 'attendances.schedule_id = schedsubjs.id');
+    $this->join('subjects', 'schedsubjs.subject_id = subjects.id');
    
     if(!empty($data['date'])){
       $this->where('attendances.date', $data['date']);

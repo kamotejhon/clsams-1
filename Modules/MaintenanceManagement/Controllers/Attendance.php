@@ -49,7 +49,6 @@ class Attendance extends BaseController {
        $data['attendances'] = $attendanceModel->getAttendancesByFilter($_POST);
        $data['value'] = $_POST;
 
-
     }
     $data['view'] = 'Modules\MaintenanceManagement\Views\attendance\frmAttendance';
     return view('template/index', $data);
@@ -115,7 +114,7 @@ class Attendance extends BaseController {
     $this->response->setHeader('Content-Type', 'application/pdf');
     $random = rand();
     $mpdf->Output("$subj_name  $course_abbrev  $year-$section $random.pdf",'I'); // opens in browser
-
+    
     $data['view'] = 'Modules\MaintenanceManagement\Views\attendance\frmAttendance';
     return view('template/index', $data);
   }
@@ -131,7 +130,7 @@ class Attendance extends BaseController {
     $data['professors'] = $professorsModel->getProfessors();
 
 
-    if($_SESSION['rid'] == '2'){
+    if($_SESSION['rid'] == '1,2'){
       $professor = $professorsModel->getProfessorsByUserId($_SESSION['uid']);
       $data['attendances'] = $attendanceModel->getAttendancesBySchedsubj($professor['id']);
     }else{
@@ -167,13 +166,10 @@ class Attendance extends BaseController {
   
     if(!empty($professor) ) {
   
-    
-
           $attendance = $attendanceModel->getAttendance($professor['id'],$current_date);
       
           $sched = $schedsubj->getStudentScheduleForProf($professor['id'],$current_day,$current_time);
          
-          
         $data['professor_id'] = $professor['id'];
         $data['faculty_code'] = $_POST['faculty_code'];
         $data['date'] = $current_date;
@@ -261,7 +257,7 @@ class Attendance extends BaseController {
 
     $mpdf = new \Mpdf\Mpdf();
 
-    if($_SESSION['rid'] == '2'){
+    if($_SESSION['rid'] == '1,2'){
       $professor = $professorsModel->getProfessorsByUserId($_SESSION['uid']);
       $pdf_data['attendances'] = $attendanceModel->getAttendancesBySchedsubj($professor['id']);
     }else{

@@ -106,7 +106,8 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="username">Student Number: </label>
+                      <label for="student_num">Faculty Number: </label>
+                      <td><?=esc($rec['year'].'-'.$rec['section'])?></td>
                       <input name="username" type="text" value="<?= isset($rec['username']) ? $rec['username'] : set_value('username') ?>" class="form-control <?= isset($errors['username']) ? 'is-invalid':' '  ?>" id="username" placeholder="User name">
                     </div>
                   </div>
@@ -142,7 +143,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="student_num">Email: </label>
-                      <input name="Email" type="text" value="<?= isset($rec['email']) ? $rec['email'] : set_value('email') ?>" class="form-control  ? 'is-invalid':' '  ?>" id="email" placeholder="Email">
+                      <input name="Email" type="text" value="<?= isset($rec['Email']) ? $rec['Email'] : set_value('Email') ?>" class="form-control  ? 'is-invalid':' '  ?>" id="Email" placeholder="Email">
                     </div>
                   </div>
                 </div>

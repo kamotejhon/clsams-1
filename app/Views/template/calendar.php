@@ -77,7 +77,7 @@ $(function () {
 				$("td.fc-day[data-date='"+ start +"']").addClass('fc-disabled');
 			}
 		}
-		/*,
+		,
 		
 		eventMouseover: function(calEvent, jsEvent) {
 			var tooltip = '<div class="tooltipevent" style="width:100px;height:100px;background:#ccc;position:absolute;z-index:10001;">' + calEvent.title + '</div>';
@@ -95,7 +95,7 @@ $(function () {
 		eventMouseout: function(calEvent, jsEvent) {
 			$(this).css('z-index', 8);
 			$('.tooltipevent').remove();
-		}*/
+		}
 	});
 });//off
 </script>

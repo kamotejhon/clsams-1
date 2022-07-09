@@ -27,12 +27,12 @@
 
 
             <div class="card-tools">
-              <!-- <button type="button" class="btn btn-tool" data-card-widget="collapse">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
                 <i class="fas fa-minus"></i>
               </button>
               <button type="button" class="btn btn-tool" data-card-widget="remove">
                 <i class="fas fa-times"></i>
-              </button> -->
+              </button>
                 <?= \Config\Services::validation()->listErrors(); ?>
             <span class="d-none alert alert-success mb-3" id="res_message"></span>
             </div>

@@ -33,7 +33,7 @@
                           <thead>
                           <tr class="text-center">
                             <th>#</th>
-                           <th>Student Number</th>
+                            <th>Student Number</th>
                             <th>Name</th>
                             <th>Course</th>
                             <th>Year and Section</th>

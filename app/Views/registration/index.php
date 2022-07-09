@@ -26,7 +26,7 @@
           <div class="form-wrapper align-center">
             <form class="form sign-up" action="<?= base_url("Registration") ?>" method="post">
              <div class="form-group">
-                <i class="bx bxs-user"></i>
+                <i class="bx bxs  -user"></i>
                 <input placeholder="Student Number" type="text" class="form-control" name="student_num">
               </div>
              <div class="form-group">
@@ -40,6 +40,10 @@
               <div class="form-group">
                 <i class="bx bxs-user"></i>
                 <input placeholder="Last Name" type="text" class="form-control" name="last_name">
+              </div>
+              <div class="form-group">
+                <i class="bx bxs-user"></i>
+                <input placeholder="Email" type="email" class="form-control" name="email">
               </div>
               <div class="input-group">
                 <i class="bx bxs-user"></i>

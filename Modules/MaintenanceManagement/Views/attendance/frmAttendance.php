@@ -30,8 +30,7 @@
                       <label for="schyear_id">Date*</label>
                       <input type="date" value="<?= isset($value['date']) ? $value['date']:''?>"class="form-control" id="date" name="date">
                     </div>
-
-                    <div class="form-group">
+                      <div class="form-group">
                         <label class="form-label" for="section_id"> Year & Section</label>
                         <select name="section_id" id="section_id" class="form-control">
                           <option selected disabled>-- Please Select Section --</option>
@@ -74,15 +73,13 @@
 
                   </div>
 
-
-
                   <div class="col-md-6">
                       <div class="form-group">
                         <label class="form-label" for="subject_id">Subject</label>
                         <select name="subject_id" id="subject_id" class="form-control">
                           <option selected disabled>-- Please Select Subject --</option>
                           <?php foreach($subjects as $subject): ?>
-                          <option value="<?= $subject['id'] ?>" <?=   ($subject['id'] == isset($value['subject_id'])) ? 'selected':'' ?>><?= ucwords($subject['subj_name']) ?></option>
+                          <option value="<?= $subject['id'] ?>" <?=($subject['id'] == isset($value['subject_id'])) ? 'selected':'' ?>><?= ucwords($subject['subj_name']) ?></option>
                           <?php endforeach; ?>
                         <!--  -->
                         </select>
@@ -93,7 +90,7 @@
                           <select name="course_id" id="course_id" class="form-control">
                             <option selected disabled>-- Please Select Course --</option>
                             <?php foreach($courses as $course): ?>
-                            <option value="<?= $course['id'] ?>" <?=   ($course['id'] == isset($value['course_id'])) ? 'selected':'' ?>><?= ucwords($course['course_abbrev']) ?> - <?= ucwords($course['course_name']) ?></option>
+                            <option value="<?= $course['id'] ?>" <?=($course['id'] == isset($value['course_id'])) ? 'selected':'' ?>><?= ucwords($course['course_abbrev']) ?> - <?= ucwords($course['course_name']) ?></option>
                             <?php endforeach; ?>
                           <!--  -->
                           </select>
@@ -163,7 +160,8 @@
                         <tr>
                           <td><?=esc($attendance['student_num'])?></td>
                           <td><?=esc($attendance['last_name'])?>, <?=esc($attendance['first_name'])?> <?=esc($attendance['m_initial'])?></td>
-                          <td><?=esc($attendance['subj_name'] ? 'Subject: '.$attendance['subj_name']: 'Event: '.$attendance['event_name'])?></td>
+                          
+                          <td><?=esc($attendance['subj_name'] ? 'Subject: '.$attendance['subj_name'] : 'Event: '.$attendance['event'])?></td>
                           <td><?=esc(date('H:i:s A', strtotime($attendance['time_in'])))?></td>
                           <td><?=esc(($attendance['time_out']) ? date('H:i:s A', strtotime($attendance['time_out'])):' ')?></td>
                           <td><?=esc($attendance['remarks'])?></td>
@@ -171,17 +169,7 @@
                         <?php $ctr++?>
                       <?php endforeach; ?>
                     <?php endif; ?>
-                      </tbody>
-
-                    </table>
-                  </div>
-              <!-- /.card-body -->
-            </div>
-          </div>
-      </div>
-
-  </section>
-</div>
+                  
 
 <script>
 var value =  JSON.parse('<?= json_encode(isset($value));?>');
@@ -221,7 +209,7 @@ $('#time_in').on('click', function(){
 });
 
 $('#time_out').on('click', function(e){
-  // e.preventDefault();
+  e.preventDefault();
   var student_num = $('#stud_num').val();
 
   $.ajax({

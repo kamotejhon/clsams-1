@@ -63,7 +63,7 @@
               <div class="inner">
                 <h3><?= $total_registered;?></h3>
 
-                <p>User Registrations</p>
+                <p>Users</p>
               </div>
               <div class="icon">
                 <i class="fas fa-user-plus"></i>
