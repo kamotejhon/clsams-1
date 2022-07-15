@@ -75,7 +75,7 @@
             <div id="modalBody" class="modal-body">
 
             </div>
-            <?php if($_SESSION['rid'] == '1' || $_SESSION['rid'] == '2'):?>
+            <?php if($_SESSION['rid'] == '3'):?>
             <div class="modal-footer">
               <button type="submit"  class="btn btn-warning" data-toggle="modal" data-target="#modal-schedule">Cancel Schedule</button>
               <button type="submit" id="attendance" class="btn btn-primary">Attendance</button>

@@ -89,6 +89,7 @@
 <script>
 var sched_data =  JSON.parse('<?= json_encode($data);?>');
 var info =  JSON.parse('<?= json_encode($info);?>');
+// console.log(sched_data);
 $(function(){
   $('#attendance').DataTable({
       "paging": true,

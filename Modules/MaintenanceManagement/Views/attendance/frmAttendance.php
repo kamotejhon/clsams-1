@@ -171,8 +171,9 @@
                     <?php endif; ?>
                   
 
-<script>
+<!-- <script>
 var value =  JSON.parse('<?= json_encode(isset($value));?>');
+console.log(value);
 
 $(function(){
   $('#attendance').DataTable({
@@ -223,4 +224,4 @@ $('#time_out').on('click', function(e){
   });
 });
 
-</script>
+</script> -->

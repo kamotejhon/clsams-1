@@ -42,7 +42,8 @@ class StudentsModel extends BaseModel {
   public function addRegisteredStudent($data, $user_id){
     unset($data['password']);
 
-    $data['student_num'] = $data['username'];
+    $data['student_num'] = $data['student_num'];
+    $data['username'] = $data['username'];
     $data['user_id'] = $user_id;
     $data['status'] = 'a';
     $data['created_at'] = (new \DateTime())->format('Y-m-d H:i:s');

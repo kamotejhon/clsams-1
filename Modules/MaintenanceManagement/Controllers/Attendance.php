@@ -72,6 +72,7 @@ class Attendance extends BaseController {
     $data['end_time'] = ($_GET['end_time'] !== 'undefined') ? $_GET['end_time']:'';
     $attendance = $attendanceModel->getAttendancesByFilter($data);
     $pdf_data['attendances'] = $attendance;
+    
     $pdf_data['headers'] = $attendanceModel->getAttendancesByDate($attendance[0]['schedule_id'],$data['date']);
     $pdf_data['times'] = $attendanceModel->getAttendancesOnTime($attendance[0]['schedule_id'],$data['date']);
 

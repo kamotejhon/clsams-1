@@ -3,12 +3,12 @@
 #profileDisplay {
   display: block;
   height: 50%;
-  width: 30%;
+  width: 20%;
   margin: 0px auto;
   border-radius: 10%;
 }
 .img-placeholder {
-  width: 30%;
+  width: 20%;
   color: white;
   margin-bottom: 50%;
   background: black;
@@ -29,7 +29,13 @@
   display: block;
   cursor: pointer;
 }
+.fa.fa-instagram, .fa.fa-twitter, .fa.fa-linkedin, .fa.fa-facebook { 
+  font-size: 2em; 
+}
+
 </style>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -66,7 +72,11 @@
                         <img src="<?= ($rec['profile_image'] !== '') ? $rec['profile_image']:base_url('/assets/uploads/blank.png')?>" onClick="triggerClick()" class="roundeds" id="profileDisplay">
                       </span>
                       <input type="file" name="profile_image" onChange="displayImage(this)" id="profileImage" class="form-control" style="display: none;">
-                      <label>Profile Picture</label>
+                      <label>Polytechnic University of the Philippines</label><br>
+                        <!-- <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a> -->
                     </div>
                   </div>
                 </div>
@@ -111,19 +121,8 @@
                     </div>
                   </div>
 
+                  
                   <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="username">User Name*</label>
-                      <input name="username" type="text" value="<?= isset($rec['username']) ? $rec['username'] : set_value('username') ?>" class="form-control <?= isset($errors['username']) ? 'is-invalid':' '  ?>" id="username" placeholder="User name">
-                      <?php if(isset($errors['username'])):?>
-                        <p class="text-danger"><?=esc($errors['username'])?><p>
-                      <?php endif;?>
-                    </div>
-                  </div>
-                </div>
-                        
-                <div class="row">
-                  <div class="col-md-12">
                     <div class="form-group">
                       <label for="student_num">Address: </label>
                       <input name="address" type="text" value="<?= isset($rec['address']) ? $rec['address'] : set_value('address') ?>" class="form-control  ? 'is-invalid':' '  ?>" id="address" placeholder="Address">

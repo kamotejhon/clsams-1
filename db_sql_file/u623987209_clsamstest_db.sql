@@ -683,12 +683,12 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `user_id`, `student_num`, `first_name`, `last_name`, `m_initial`, `suffix_id`, `course_id`, `section_id`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, 0, '2015-00327-TG-0', 'Jericho', 'Dela Cruz', 'A.', 0, 1, 3, 'a', '2021-06-19 08:25:57', '2021-09-19 14:01:44', NULL),
-(4, 0, '2015-00256-TG-0', 'Joshua', 'Capalaran', 'A', 0, 1, 3, 'a', '2021-06-22 13:29:19', '2021-08-30 14:16:51', NULL),
-(10, 0, '2015-00323-TG-0', 'test', 'test', 'test', 0, 1, 3, 'a', '2021-06-29 23:50:44', '2021-08-30 14:17:11', NULL),
-(11, 0, '1231-23123-TG-1', 'e', 'e', 'e', 0, 2, 2, 'a', '2021-07-18 23:39:07', '2021-10-09 12:36:53', NULL),
-(15, 17, '2018-00256-TG-0', 'Joshua ', 'Capalaran', 'A', 0, 1, 3, 'a', '2021-08-31 03:40:59', '2021-08-31 03:40:59', NULL),
-(16, 18, '2018-00555-TG-0', 'Boruto', 'Namikaze', 'U', 0, 3, 3, 'a', '2021-10-10 03:04:23', '2021-10-10 03:04:23', NULL);
+(1, 1, '2019-00493-TG-0', 'Francheska Nicole', 'Alcid', 'C.', 0, 1, 3, 'a', '2021-06-19 08:25:57', '2021-09-19 14:01:44', NULL),
+(2, 2, '2019-00519-TG-0', 'Mark Joshua', 'Allado', 'C', 0, 1, 3, 'a', '2021-06-22 13:29:19', '2021-08-30 14:16:51', NULL),
+(3, 3, '2019-00488-TG-0', 'Christian Phillip', 'Alvaro', 'test', 0, 1, 3, 'a', '2021-06-29 23:50:44', '2021-08-30 14:17:11', NULL),
+(4, 4, '2019-00531-TG-0', 'Irenic Danae', 'Atun', 'C', 0, 2, 2, 'a', '2021-07-18 23:39:07', '2021-10-09 12:36:53', NULL),
+(5, 5, '2019-00527-TG-0', 'April  ', 'Azagra', 'p', 0, 1, 3, 'a', '2021-08-31 03:40:59', '2021-08-31 03:40:59', NULL),
+(6, 6, '2019-00388-TG-0', 'Ivan Rae', 'Baribar', 'V', 0, 3, 3, 'a', '2021-10-10 03:04:23', '2021-10-10 03:04:23', NULL);
 
 -- --------------------------------------------------------
 
@@ -758,9 +758,7 @@ INSERT INTO `suffixes` (`id`, `suffix_name`, `status`, `created_at`, `updated_at
 (2, 'I', 'a', '2021-06-02 21:29:54', '2021-06-02 21:29:54', NULL),
 (3, 'II', 'a', '2021-06-02 21:29:59', '2021-06-02 21:29:59', NULL),
 (4, 'III', 'a', '2021-06-02 21:30:07', '2021-06-02 21:30:07', NULL),
-(5, 'Sr', 'a', '2021-06-02 21:30:12', '2021-06-02 21:30:12', NULL),
-(6, 'PhD', 'a', '2021-06-02 21:30:20', '2021-06-02 21:30:20', NULL);
-
+(5, 'Sr', 'a', '2021-06-02 21:30:12', '2021-06-02 21:30:12', NULL);
 -- --------------------------------------------------------
 
 --
@@ -775,6 +773,8 @@ CREATE TABLE `users` (
   `m_initial` varchar(100) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(60) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `contact_num` int(20) NOT NULL,
   `email` varchar(50) NOT NULL,
   `token` varchar(50) NOT NULL,
   `status` varchar(1) NOT NULL,
@@ -788,17 +788,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `role_id`, `first_name`, `last_name`, `m_initial`, `username`, `password`, `email`, `token`, `status`, `profile_image`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 1, 'Joshua', 'Capalaran', 'A.', 'superadmin', '$2y$10$.tIcLMncWrWg8B4xhkjOXuzVRk1Xc4ahHi5XZlkVeuE2xTA9a7sqW', '', '', 'a', '', '2021-06-19 19:15:38', '2021-10-20 09:10:03', NULL),
-(2, 3, 'josh kyle', 'clemente', 'a', '2015-00327-TG-0', '$2y$10$keKsRC.9DodeVayJKRFxYeAR6RksZdm9n6DBLYhMYt3LylK.uPSxy', '', '', 'a', '', '2021-06-19 08:25:57', '2021-07-28 01:57:02', NULL),
-(9, 3, 'joshua', 'e', 'e', '1231-23123-TG-1', '$2y$10$msDQp/G/ugXBRnxvgG7bsu138tgjuf5XQiERLquhs3DCQstWG/l7W', '', '', 'a', '', '2021-07-18 23:39:07', '2021-09-16 05:22:39', NULL),
-(14, 3, 'student', 'test', 'a', 'test', '$2y$10$PnpIwwGcxdIrbrICyHZeFuJOBI34KbeCu7cBZC.RAYhJRsYtbkZx.', '', '', 'd', '', '2021-07-28 03:48:50', NULL, NULL),
-(13, 2, 'prof', 'test', 'test', 'test', '$2y$10$u9CsgwU/jXpzrttUjGIaOeu1YQX2iu7jhslP9lMfpfnPW3/m19HVy', '', '', 'a', '', '2021-07-28 03:47:58', NULL, NULL),
-(15, 2, 'teset', 'test', 'test', 'testest', '$2y$10$TX4CCRj.JcRDtoHRbYTuz.4o1wVY7lCZCJ/Wpo85pXkQt5QapQ82e', '', '', 'a', '', '2021-07-28 12:29:11', NULL, NULL),
-(16, 3, 'test', '53w', 't', 'tsettest', '$2y$10$PUcAZ4nGYdNw75pIQrHOq.HFeRUbtCaxkGnyqWM.ZnbhTvMUdjQ5e', '', '', 'a', '', '2021-07-28 12:29:55', NULL, NULL),
-(17, 3, 'Joshua ', 'Capalaran', 'A', '2018-00256-TG-0', '$2y$10$DqtQogWOS7Es3mj4MybKQeujhyMQi/USPgG4WMaAYdqPVsfkUhHzC', '', '', 'a', 'http://clsams.csovernightstaguig.online/assets/uploads/17/242293019_4322906057823207_5011378355500330901_n.jpg', '2021-08-31 03:40:59', '2021-10-20 23:17:03', NULL),
-(18, 3, 'Boruto', 'Namikaze', 'U', '2018-00555-TG-0', '$2y$10$4xFJYWQIzfJ21CqhWXwg5uClQIvj7nBzjd47LOUcfgbCHQqFtQcF.', '', '', 'a', '', '2021-10-10 03:04:23', '2021-10-21 12:20:49', NULL);
-
+INSERT INTO users (id, role_id, first_name, last_name, m_initial, username, password, address, contact_num, email, token, status, profile_image, created_at, updated_at, deleted_at) VALUES
+(1, 1, 'Jhon Niño', 'Bustamante', 'S.', 'superadmin', '$2y$10$.tIcLMncWrWg8B4xhkjOXuzVRk1Xc4ahHi5XZlkVeuE2xTA9a7sqW','','', 'jhonbustamante011501@gmail.com', '', 'a', '', '2021-06-19 19:15:38', '2021-10-20 09:10:03', NULL),
+(2, 3, 'Francheska Nicole', 'Alcid', 'C', '2019-00519-TG-O', '$2y$10$keKsRC.9DodeVayJKRFxYeAR6RksZdm9n6DBLYhMYt3LylK.uPSxy','','', 'nicoleskiie@gmail.com', '', 'a', '', '2021-06-19 08:25:57', '2021-07-28 01:57:02', NULL),
+(3, 3, 'Ivan Rae', 'Baribar', 'V', '2019-00388-TG-O', '$2y$10$msDQp/G/ugXBRnxvgG7bsu138tgjuf5XQiERLquhs3DCQstWG/l7W','','', 'ivanraeb01@gmail.com', '', 'a', '', '2021-07-18 23:39:07', '2021-09-16 05:22:39', NULL);                  
 -- --------------------------------------------------------
 
 --

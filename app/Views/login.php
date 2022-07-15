@@ -73,7 +73,7 @@
             <div class="form sign-in">
               <div class="form-group">
                 <i class="bxs-user"></i>
-                <input type="text" name="username" class="form-control" placeholder="Username" id="username" required>
+                <input type="text" name="username" class="form-control" placeholder="Student-ID" id="username" required>
               </div>
               <div class="form-group">
                 <i class="bx bxs-lock-alt"></i>

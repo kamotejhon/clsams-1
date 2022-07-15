@@ -106,8 +106,7 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="student_num">Faculty Number: </label>
-                      <td><?=esc($rec['year'].'-'.$rec['section'])?></td>
+                      <label for="username">Student Number: </label>
                       <input name="username" type="text" value="<?= isset($rec['username']) ? $rec['username'] : set_value('username') ?>" class="form-control <?= isset($errors['username']) ? 'is-invalid':' '  ?>" id="username" placeholder="User name">
                     </div>
                   </div>
